@@ -1,0 +1,16 @@
+{
+  "name": "Himadri Biswas Portfolio",
+  "short_name": "HB Portfolio",
+  "description": "Portfolio of Himadri Biswas, Software Developer & Owner of Multiplus Computer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#18181b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
