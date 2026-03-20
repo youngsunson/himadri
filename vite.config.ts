@@ -6,12 +6,14 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
+  // Base for GitHub Pages: /<repo>/ when not using a user/organization site.
+  const repoBase = '/himadri/';
+
   return {
+    base: mode === 'production' ? repoBase : '/',
     plugins: [react(), tailwindcss()],
-    // NOTE: Do NOT inject secrets (like GEMINI_API_KEY) into the client bundle.
-    // If you need public flags, use PUBLIC_* env vars and reference them via import.meta.env.PUBLIC_X
     define: {
-      // e.g. 'import.meta.env.PUBLIC_APP_URL': JSON.stringify(env.PUBLIC_APP_URL),
+      // keep empty to avoid injecting client secrets
     },
     resolve: {
       alias: {
