@@ -1,14 +1,17 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
+
   return {
     plugins: [react(), tailwindcss()],
+    // NOTE: Do NOT inject secrets (like GEMINI_API_KEY) into the client bundle.
+    // If you need public flags, use PUBLIC_* env vars and reference them via import.meta.env.PUBLIC_X
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      // e.g. 'import.meta.env.PUBLIC_APP_URL': JSON.stringify(env.PUBLIC_APP_URL),
     },
     resolve: {
       alias: {
@@ -16,8 +19,6 @@ export default defineConfig(({mode}) => {
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
