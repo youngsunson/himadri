@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   // Base for GitHub Pages: /<repo>/ when not using a user/organization site.
-  const repoBase = '/himadri-portfolio/';
+  const repoBase = '/';
 
   return {
     base: mode === 'production' ? repoBase : '/',
