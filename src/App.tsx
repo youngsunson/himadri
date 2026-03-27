@@ -52,7 +52,7 @@ const CONTENT = {
         category: "Desktop / Workflow / Automation",
         description: "A professional task management application built for educational institutions in Bangladesh. Features a robust offline-first architecture with cloud synchronization.",
         tags: ["Python 3.10", "PySide6 (Qt6)", "SQLite", "Google Apps Script", "PyInstaller"],
-        link: "#",
+        link: "https://institution-office-task-reminder.github.io",
         stats: "v2.0.1",
         highlights: [
           "Hybrid Offline-First Sync Architecture",
@@ -169,7 +169,7 @@ const CONTENT = {
         category: "Desktop / Workflow / Automation",
         description: "বাংলাদেশের শিক্ষাপ্রতিষ্ঠানগুলোর জন্য বিশেষভাবে তৈরি একটি অফলাইন-ফার্স্ট টাস্ক ম্যানেজমেন্ট সফটওয়্যার। ইন্টারনেট সংযোগ ছাড়াও কাজ করে এবং পরবর্তীতে স্বয়ংক্রিয়ভাবে ক্লাউডের সাথে ডেটা সিঙ্ক হয়।",
         tags: ["Python 3.10", "PySide6 (Qt6)", "SQLite", "Google Apps Script", "PyInstaller"],
-        link: "#",
+        link: "https://institution-office-task-reminder.github.io",
         stats: "v2.0.1",
         highlights: [
           "হাইব্রিড অফলাইন-ফার্স্ট আর্কিটেকচার",
